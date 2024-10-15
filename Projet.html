@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'utilisation des pesticides au Bénin</title>
+    <link rel="stylesheet" href="Projet.css">
+</head>
+<body>
+
+    <h1>Formulaire d'utilisation des pesticides et des risques liés à leur utilisation</h1>
+    <p>Veuillez remplir ce formulaire pour nous aider à comprendre l'utilisation des pesticides et les risques associés au Bénin.</p>
+
+    <form action="/submit" method="post">
+        <!-- Section Informations personnelles -->
+        <fieldset>
+            <legend>Informations personnelles</legend>
+            
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required>
+
+            <label for="age">Âge :</label>
+            <input type="number" id="age" name="age" placeholder="Votre âge" required>
+
+            <label for="localisation">Localisation (Région/Village) :</label>
+            <input type="text" id="localisation" name="localisation" placeholder="Votre localisation" required>
+        </fieldset>
+
+        <!-- Section Utilisation des pesticides -->
+        <fieldset>
+            <legend>Utilisation des pesticides</legend>
+            
+            <label for="culture">Type de culture :</label>
+            <input type="text" id="culture" name="culture" placeholder="Ex: maïs, coton, riz" required>
+
+            <label for="pesticides">Type de pesticides utilisés :</label>
+            <input type="text" id="pesticides" name="pesticides" placeholder="Nom du pesticide" required>
+
+            <label for="frequence">Fréquence d'utilisation :</label>
+            <select id="frequence" name="frequence" required>
+                <option value="">Sélectionnez une fréquence</option>
+                <option value="quotidienne">Quotidienne</option>
+                <option value="hebdomadaire">Hebdomadaire</option>
+                <option value="mensuelle">Mensuelle</option>
+                <option value="occasionnelle">Occasionnelle</option>
+            </select>
+
+            <label for="duree">Depuis combien de temps utilisez-vous ces pesticides ?</label>
+            <input type="text" id="duree" name="duree" placeholder="Ex: 1 an, 2 ans, 5 ans" required>
+        </fieldset>
+
+        <!-- Section Risques et protection -->
+        <fieldset>
+            <legend>Risques et mesures de protection</legend>
+
+            <label>Avez-vous déjà ressenti des effets secondaires après l'utilisation des pesticides ?</label>
+            <input type="radio" id="oui-effets" name="effets-secondaires" value="oui" required>
+            <label for="oui-effets">Oui</label>
+            <input type="radio" id="non-effets" name="effets-secondaires" value="non">
+            <label for="non-effets">Non</label><br>
+
+            <label for="types-effets">Si oui, quels effets avez-vous ressentis ?</label>
+            <textarea id="types-effets" name="types-effets" placeholder="Ex: maux de tête, nausées, irritations..." rows="4"></textarea>
+            <span class="alert" id="types-effets-alert">Veuillez décrire les effets ressentis si vous avez sélectionné "Oui".</span>
+
+            <label>Quelles mesures de protection prenez-vous lors de l'application des pesticides ?</label>
+            <input type="checkbox" id="masque" name="protection" value="masque">
+            <label for="masque">Masque</label>
+            <input type="checkbox" id="gants" name="protection" value="gants">
+            <label for="gants">Gants</label>
+            <input type="checkbox" id="lunettes" name="protection" value="lunettes">
+            <label for="lunettes">Lunettes de protection</label>
+            <input type="checkbox" id="aucune" name="protection" value="aucune">
+            <label for="aucune">Aucune protection</label>
+        </fieldset>
+
+        <!-- Section Sensibilisation -->
+        <fieldset>
+            <legend>Sensibilisation aux risques</legend>
+
+            <label for="formation">Avez-vous reçu une formation ou une sensibilisation sur les risques liés à l'utilisation des pesticides ?</label>
+            <input type="radio" id="oui-formation" name="formation" value="oui" required>
+            <label for="oui-formation">Oui</label>
+            <input type="radio" id="non-formation" name="formation" value="non">
+            <label for="non-formation">Non</label>
+
+            <label for="commentaires">Commentaires ou suggestions :</label>
+            <textarea id="commentaires" name="commentaires" placeholder="Vos commentaires" rows="4"></textarea>
+        </fieldset>
+
+        <input type="submit" value="Envoyer">
+    </form>
+<script src="Projet.js"></script>
+</body>
+</html>
